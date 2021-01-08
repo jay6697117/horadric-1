@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var path = require('../tools/path');
+var program = require('commander');
+var colors = require('colors');
+
+// console.log(process.argv);
+
+program
+  .version(require('../package.json').version)
+  .usage('<command> [options]')
+  .command('new', 'new a project seed')
+  .parse(process.argv);
